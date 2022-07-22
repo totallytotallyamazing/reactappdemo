@@ -1,16 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import NavBar from './ui-components/NavBar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
-    </div>
-  );
+
+    // const navbarOverrides = {
+    //     'image': {
+    //         src: ''
+    //     }
+    // }
+
+    return (
+        <div className="App">
+            <NavBar />
+            <header className="App-header">
+                <h1>Car Rental App</h1>
+            </header>
+        </div>
+    );
 }
 
 export default App;
