@@ -5,9 +5,6 @@ import { AddCar, NavBar, NewCarsCollection } from './ui-components';
 import { DataStore } from '@aws-amplify/datastore';
 import { withAuthenticator, Divider } from '@aws-amplify/ui-react';
 import { RentalCar } from './models';
-import Amplify, { Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
 
 function App({user, signOut}) {
 
