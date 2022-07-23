@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CarRentalCard(props) {
-  const { overrides, ...rest } = props;
+  const { rentalCar, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -29,6 +29,7 @@ export default function CarRentalCard(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
+        src={rentalCar?.imageUrl}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -67,7 +68,7 @@ export default function CarRentalCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="$99 USD / day"
+            children={`${"$"}${rentalCar?.price}${" / day"}`}
             {...getOverrideProps(overrides, "$99 USD / day")}
           ></Text>
           <Text
@@ -87,7 +88,7 @@ export default function CarRentalCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Car Model - Name"
+            children={rentalCar?.makeModel}
             {...getOverrideProps(overrides, "Car Model - Name")}
           ></Text>
           <Text
@@ -104,7 +105,7 @@ export default function CarRentalCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Car Description"
+            children={rentalCar?.description}
             {...getOverrideProps(overrides, "Car Description")}
           ></Text>
         </Flex>

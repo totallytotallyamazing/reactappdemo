@@ -13,6 +13,7 @@ export { default as ReviewCard } from "./ReviewCard";
 export { default as Features2x2 } from "./Features2x2";
 export { default as CommentCard } from "./CommentCard";
 export { default as SocialPost } from "./SocialPost";
+export { default as NewCarsCollection } from "./NewCarsCollection";
 export { default as ItemCard } from "./ItemCard";
 export { default as NavBar } from "./NavBar";
 export { default as CarRentalCard } from "./CarRentalCard";
