@@ -5,6 +5,9 @@ import { AddCar, NavBar, NewCarsCollection } from './ui-components';
 import { DataStore } from '@aws-amplify/datastore';
 import { withAuthenticator, Divider } from '@aws-amplify/ui-react';
 import { RentalCar } from './models';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
 
 function App({user, signOut}) {
 
@@ -59,7 +62,7 @@ function App({user, signOut}) {
             src: 'https://img.icons8.com/color/50/000000/car--v1.png'
         },
         'image': {
-            src: 'https://lh3.googleusercontent.com/a-/AFdZucqNM4GqpkwKuaPrd6RQa6-nZwGcrKmgx8hD3pG1OA=s192-c-rg-br100'
+            src: 'https://icon-library.com/images/default-user-icon/default-user-icon-20.jpg'
             // For specific user profile icon img
             // 'user?.attributes?.profile'
         },
